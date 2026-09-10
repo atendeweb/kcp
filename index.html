@@ -1,413 +1,481 @@
-<html lang="pt-BR" class="no-js">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kit Campanha Política - Feira de Santana, Salvador e Região</title>
-    <meta name="description" content="{{ site.description }}"/>
-    <meta name="keywords" content="{{ site.keywords }}"/>
-    <meta name="author" content="{{ site.author }}"/>
-    <link rel="shortcut icon" href="https://jnconviteria.com.br/img/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="https://jnconviteria.com.br/css/normalize.css"/>
-    <link rel="stylesheet" type="text/css" href="https://jnconviteria.com.br/fonts/font-awesome/css/font-awesome.css"/>
-    <link rel="stylesheet" type="text/css" href="https://jnconviteria.com.br/css/modern-blog.css"/>
-    <!--[if IE]>
-    <script type="text/javascript" src="https://jnconviteria.com.br/js/vendors/html5.min.js"></script>
-    <![endif]-->
-    <script>
-        if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
-            var root = document.getElementsByTagName('html')[0];
-            root.setAttribute('class', 'ff');
-        }
-    </script>
-	<style>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kit Campanha Política — Material Eleitoral em Feira de Santana, Salvador e Região</title>
+<meta name="description" content="{{ site.description }}"/>
+<meta name="keywords" content="{{ site.keywords }}"/>
+<meta name="author" content="{{ site.author }}"/>
+<link rel="canonical" href="https://kitcampanhapolitica.com.br/">
+<link rel="shortcut icon" href="https://jnconviteria.com.br/img/favicon.ico">
 
-/* Garante que o container do título tenha posição relativa */
-.card__caption {
-    position: relative;
-    padding-right: 60px; /* Espaço para o botão */
-    z-index: 10; /* Camada base */
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kit Campanha Política — Feira de Santana, Salvador e Região">
+<meta property="og:description" content="Pirulito, adesivo de carro, praguinha e placão 30x30, mochila pirulito e perfurado — produção rápida para sua campanha eleitoral.">
+<meta property="og:image" content="https://alpha-cms-content-prod.s3.us-east-1.amazonaws.com/blog/740x650px_Post_Blog_fe4e565d05.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Kit Campanha Política",
+  "description": "Produção de kit de material de campanha eleitoral: pirulito, adesivo de carro, praguinha e placão 30x30, mochila pirulito e adesivo perfurado.",
+  "areaServed": ["Feira de Santana", "Salvador", "Bahia"],
+  "url": "https://kitcampanhapolitica.com.br/",
+  "telephone": "+5575992428000"
 }
-
-/* Estilo do botão WhatsApp com prioridade máxima */
-.whatsapp-btn {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #25D366;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 24px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-    z-index: 1000; /* Valor alto para garantir sobreposição */
-    pointer-events: auto; /* Garante que é clicável */
-}
-
-/* Efeito hover */
-.whatsapp-btn:hover {
-    background-color: #128C7E;
-    transform: translateY(-50%) scale(1.1);
-}
-
-/* Garante que o texto do título não sobreponha */
-.card__title, .card__subtitle {
-    position: relative;
-    z-index: 5; /* Abaixo do botão */
-    max-width: calc(100% - 70px); /* Espaço para o botão */
-}
-
-/* Seção de destaque (kit eleitoral) */
-.section-title {
-    width: 90%;
-    margin: 40px auto 10px;
-    text-align: center;
-    font-size: 1.8em;
-    color: #222;
-}
-
-.section-subtitle {
-    width: 90%;
-    margin: 0 auto 20px;
-    text-align: center;
-    color: #666;
-    font-size: 1em;
-}
-
-/* Seção secundária (catálogo geral Gráfica JN) - menos destaque */
-.secondary-section {
-    width: 90%;
-    margin: 20px auto 10px;
-    text-align: center;
-    opacity: 0.9;
-}
-
-.secondary-section .section-title {
-    font-size: 1.3em;
-    color: #555;
-}
-
-.secondary-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    width: 90%;
-    margin: 0 auto 20px;
-}
-
-.secondary-wrapper .mini-card {
-    width: 130px;
-    text-align: center;
-    opacity: 0.85;
-    transition: opacity 0.3s ease;
-}
-
-.secondary-wrapper .mini-card:hover {
-    opacity: 1;
-}
-
-.secondary-wrapper .mini-card img {
-    width: 100%;
-    height: 90px;
-    object-fit: cover;
-    border-radius: 6px;
-    display: block;
-}
-
-.secondary-wrapper .mini-card span {
-    display: block;
-    font-size: 0.75em;
-    color: #666;
-    margin-top: 4px;
-}
-
-.secondary-cta {
-    display: inline-block;
-    margin: 10px auto 30px;
-    font-size: 0.85em;
-    color: #888;
-}
-
-.secondary-cta a {
-    color: #128C7E;
-    text-decoration: none;
-}
-
-	</style>
-</head>
-<body class="body">
-<div class="container">
-    <header class="header">
-	<img src="https://jnconviteria.com.br/img/logo.png" width="100">
-        <h1>Kit Campanha Política<span>Feira de Santana, Salvador e Região BA</span></h1>
-        <nav class="links">
-            <nav class="links">
-				<a href="https://wa.me/5575992428000?text=Olá,%20vim%20pelo%20site%20do%20Kit%20Campanha%20Política" target="_blank" title="WhatsApp"><i class="fa fa-whatsapp fa-3x"></i></a>
-				<a href="https://www.google.com/maps?sca_esv=adde10145c0e0ebd&hl=pt-PT&iflsig=AOw8s4IAAAAAaJTT5XRiqeoZZWkvYx9BgHsZgdBvwcEU&uact=5&gs_lp=Egdnd3Mtd2l6Ig1qbiBjb252aXRlcmlhMgUQABiABDIFEAAYgAQyBhAAGBYYHjICECYyBRAAGO8FMgUQABjvBTIFEAAY7wUyBRAAGO8FSLUMULYEWPQLcAB4AJABAJgBmgKgAe8HqgEDMi00uAEDyAEA-AEBmAIEoAKjCKgCCsICEBAAGIAEGEMYtAIYigUY6gLCAhIQABiABBhDGLQCGIoFGOoCGArCAhoQABiABBi0AhjUAxjlAhi3AxiKBRjqAhiKA8ICEBAuGIAEGNEDGEMYxwEYigXCAgsQLhiABBjRAxjHAZgD4AHxBalyTAmM-j4GkgcDMi00oAfsFrIHAzItNLgHowjCBwUyLTEuM8gHKw&um=1&ie=UTF-8&fb=1&gl=br&sa=X&geocode=KaXao912NxQHMa468ueXAMiS&daddr=R.+Rio+Amazonas,+260+-+Capuchinhos,+Feira+de+Santana+-+BA,+44076-300" title="Google Maps"><i class="fa fa-map-marker fa-3x"></i></a>
-				<a href="https://www.instagram.com/jnconviteria/" target="_blank" title="Instagram"><i class="fa fa-instagram fa-3x"></i></a>
-				<a href="https://www.facebook.com/jnconviteria/?locale=pt_BR" target="_blank" title="Facebook"><i class="fa fa-facebook-square fa-3x"></i></a>
-
-			</nav>
-        </nav>
-    </header>
-    <div class="content">
-        <!-- trianglify pattern container -->
-        <div class="pattern pattern--hidden"></div>
-
-        <h2 class="section-title">Kit Campanha Política Completo</h2>
-        <p class="section-subtitle">Produzimos e entregamos todo o material de campanha eleitoral em Feira de Santana, Salvador e região: pirulitos, adesivos, praguinhas, mochilas e muito mais.</p>
-
-        <!-- cards em destaque: kit eleitoral -->
-        <div class="wrapper">
-
-            <!-- Pirulito -->
-            <div class="card" data-id="pirulito">
-                <div class="card__container card__container--closed">
-                    <div class="card__image-container">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4i0IaZJByuzfdZ4iyaYzk_aYFuphWFJFDoT5PNMAP0lCmdHoYx61CWVBC&s=10" alt="Pirulito de Campanha Política" class="card__image">
-                    </div>
-                    <div class="card__content">
-                        <i class="card__btn-close fa fa-times"></i>
-                        <div class="card__caption">
-                            <h2 class="card__title">Pirulito</h2>
-                            <p class="card__subtitle">Feira de Santana, Salvador e Região BA</p>
-                        </div>
-                        <div class="card__copy">
-                            <div class="meta">
-                                <img class="meta__avatar" src="{{ post.avatar }}"/>
-                                <span class="meta__author">Kit Campanha Política</span>
-                                <span class="meta__date">Material de Campanha Eleitoral</span>
-                            </div>
-                            <p>Pirulito de campanha para divulgação de candidatos em ruas e eventos.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Adesivo de carro -->
-            <div class="card" data-id="adesivo-carro">
-                <div class="card__container card__container--closed">
-                    <div class="card__image-container">
-                        <img src="https://www.nicometal.com.br/assets/images/blog/adesivo-perfurado-eleicoes-1.webp" alt="Adesivo de Carro Eleitoral" class="card__image">
-                    </div>
-                    <div class="card__content">
-                        <i class="card__btn-close fa fa-times"></i>
-                        <div class="card__caption">
-                            <h2 class="card__title">Adesivo de Carro</h2>
-                            <p class="card__subtitle">Feira de Santana, Salvador e Região BA</p>
-                        </div>
-                        <div class="card__copy">
-                            <div class="meta">
-                                <img class="meta__avatar" src="{{ post.avatar }}"/>
-                                <span class="meta__author">Kit Campanha Política</span>
-                                <span class="meta__date">Material de Campanha Eleitoral</span>
-                            </div>
-                            <p>Adesivo eleitoral para vidros e lataria de veículos, reforçando a presença do candidato nas ruas.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Praguinha e Placão 30x30 -->
-            <div class="card" data-id="praguinha-30x30">
-                <div class="card__container card__container--closed">
-                    <div class="card__image-container">
-                        <img src="https://alpha-cms-content-prod.s3.us-east-1.amazonaws.com/blog/740x650px_Post_Blog_fe4e565d05.png" alt="Praguinha e Placão 30x30" class="card__image">
-                    </div>
-                    <div class="card__content">
-                        <i class="card__btn-close fa fa-times"></i>
-                        <div class="card__caption">
-                            <h2 class="card__title">Praguinha e Placão 30x30</h2>
-                            <p class="card__subtitle">Feira de Santana, Salvador e Região BA</p>
-                        </div>
-                        <div class="card__copy">
-                            <div class="meta">
-                                <img class="meta__avatar" src="{{ post.avatar }}"/>
-                                <span class="meta__author">Kit Campanha Política</span>
-                                <span class="meta__date">Material de Campanha Eleitoral</span>
-                            </div>
-                            <p>Placas de campanha no formato 30x30, ideais para portões, muros e fixação em postes.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mochila Pirulito -->
-            <div class="card" data-id="mochila-pirulito">
-                <div class="card__container card__container--closed">
-                    <div class="card__image-container">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5x2_HHr3JjTA8xGpZREthgR_a13JjpViM0cOuBchF82dkRoq16Z9s2vtS&s=10" alt="Mochila Pirulito de Campanha" class="card__image">
-                    </div>
-                    <div class="card__content">
-                        <i class="card__btn-close fa fa-times"></i>
-                        <div class="card__caption">
-                            <h2 class="card__title">Mochila Pirulito</h2>
-                            <p class="card__subtitle">Feira de Santana, Salvador e Região BA</p>
-                        </div>
-                        <div class="card__copy">
-                            <div class="meta">
-                                <img class="meta__avatar" src="{{ post.avatar }}"/>
-                                <span class="meta__author">Kit Campanha Política</span>
-                                <span class="meta__date">Material de Campanha Eleitoral</span>
-                            </div>
-                            <p>Mochila com suporte para pirulito, usada por cabos eleitorais para divulgação móvel em ruas e eventos.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Perfurado -->
-            <div class="card" data-id="perfurado">
-                <div class="card__container card__container--closed">
-                    <div class="card__image-container">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL8SpdTp8aUnhvRe0JUiuW8DcRtXqO8cqBp6RgeZp_Zw&s=10" alt="Adesivo Perfurado Eleitoral" class="card__image">
-                    </div>
-                    <div class="card__content">
-                        <i class="card__btn-close fa fa-times"></i>
-                        <div class="card__caption">
-                            <h2 class="card__title">Perfurado</h2>
-                            <p class="card__subtitle">Feira de Santana, Salvador e Região BA</p>
-                        </div>
-                        <div class="card__copy">
-                            <div class="meta">
-                                <img class="meta__avatar" src="{{ post.avatar }}"/>
-                                <span class="meta__author">Kit Campanha Política</span>
-                                <span class="meta__date">Material de Campanha Eleitoral</span>
-                            </div>
-                            <p>Adesivo perfurado (one way vision) para vidros de carros e vitrines, com visibilidade por dentro e por fora.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /cards em destaque -->
-
-        </div>
-
-        <!-- Seção secundária: catálogo geral (Gráfica JN), em menos destaque -->
-        <div class="secondary-section">
-            <h3 class="section-title">Também fazemos</h3>
-            <div class="secondary-wrapper">
-                <div class="mini-card">
-                    <img src="https://jnconviteria.com.br/img/convites.jpg" alt="Convites">
-                    <span>Convites</span>
-                </div>
-                <div class="mini-card">
-                    <img src="https://jnconviteria.com.br/img/caixascartonadas.jpg" alt="Caixas Cartonadas">
-                    <span>Caixas Cartonadas</span>
-                </div>
-                <div class="mini-card">
-                    <img src="https://jnconviteria.com.br/img/portacertificado.jpg" alt="Porta Certificado">
-                    <span>Porta Certificado</span>
-                </div>
-                <div class="mini-card">
-                    <img src="https://jnconviteria.com.br/img/ingressos.jpg" alt="Ingressos">
-                    <span>Ingressos</span>
-                </div>
-                <div class="mini-card">
-                    <img src="https://jnconviteria.com.br/img/placahomenagem.jpg" alt="Placa de Homenagem">
-                    <span>Placa de Homenagem</span>
-                </div>
-                <div class="mini-card">
-                    <img src="https://jnconviteria.com.br/img/Crachá.jpg" alt="Crachá">
-                    <span>Crachá</span>
-                </div>
-                <div class="mini-card">
-                    <img src="https://jnconviteria.com.br/img/Cordao.jpg" alt="Cordão">
-                    <span>Cordão</span>
-                </div>
-                <div class="mini-card">
-                    <img src="https://jnconviteria.com.br/img/Pulseiras-Atendimento.jpg" alt="Pulseiras de Atendimento">
-                    <span>Pulseiras</span>
-                </div>
-                <div class="mini-card">
-                    <img src="https://jnconviteria.com.br/img/Livros.jpg" alt="Livros">
-                    <span>Livros</span>
-                </div>
-                <div class="mini-card">
-                    <img src="https://jnconviteria.com.br/img/Broches.jpg" alt="Broches">
-                    <span>Broches</span>
-                </div>
-                <div class="mini-card">
-                    <img src="https://jnconviteria.com.br/img/Monografia.jpg" alt="Tese, Dissertação e Monografia">
-                    <span>Monografias</span>
-                </div>
-            </div>
-            <p class="secondary-cta">Confira o catálogo completo de gráfica em <a href="https://graficajn.com.br" target="_blank">graficajn.com.br</a></p>
-        </div>
-
-		<div class="seo-content" style="width:90%; margin:auto;">
-    <h1>Kit Campanha Política - Material Eleitoral em Feira de Santana, Salvador e Região</h1>
-
-    <p>O <strong>Kit Campanha Política</strong> é a referência em Feira de Santana, Salvador e região para produção de <strong>material de campanha eleitoral</strong> completo. Fornecemos <strong>Pirulito, Adesivo de Carro, Praguinha e Placão 30x30, Mochila Pirulito e Perfurado</strong>, tudo com produção rápida e qualidade gráfica para fortalecer a presença do candidato nas ruas.</p>
-
-    <h2>Kit Eleitoral Completo para sua Campanha</h2>
-
-    <p>Trabalhamos com candidatos, coordenadores de campanha e cabos eleitorais para entregar o <strong>kit eleitoral</strong> ideal: <strong>pirulitos</strong> e <strong>mochilas pirulito</strong> para divulgação em pontos de grande movimento, <strong>adesivos de carro</strong> e <strong>adesivos perfurados</strong> para veículos e vitrines, além de <strong>praguinhas e placões 30x30</strong> para fixação em portões, muros e postes.</p>
-
-    <h2>Cobertura em Feira de Santana, Salvador e Região</h2>
-
-    <p>Atendemos campanhas em <strong>Feira de Santana</strong>, <strong>Salvador</strong> e municípios da região, com entrega ágil para atender ao calendário eleitoral e às demandas de cada etapa da campanha.</p>
-
-    <h2>Também Somos Gráfica Completa</h2>
-
-    <p>Além do material eleitoral, também produzimos convites, crachás, cordões, placas de homenagem e outros itens gráficos através da nossa gráfica parceira. Fale com a gente e monte o kit ideal para a sua campanha.</p>
-</div><br><br>
-
-    </div>
-    <!-- /container -->
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // 1. Número correto (sem espaços, com código do país)
-    const whatsappNumber = '5575992428000';
-
-    // 2. Função corrigida para criar o botão
-    function createWhatsAppButton(title) {
-        const message = `Olá, vim pelo site e gostaria de orçamento para "${title}"`;
-        const encodedMessage = encodeURIComponent(message);
-        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-
-        const btn = document.createElement('a');
-        btn.href = whatsappUrl;
-        btn.className = 'whatsapp-btn';
-        btn.innerHTML = '<i class="fa fa-whatsapp"></i>';
-        btn.title = 'Solicitar orçamento';
-
-        // 3. Garante que abre em nova aba
-        btn.setAttribute('target', '_blank');
-        btn.setAttribute('rel', 'noopener noreferrer');
-
-        return btn;
-    }
-
-    // 4. Adiciona a cada card em destaque (verificando se o título existe)
-    document.querySelectorAll('.card__caption').forEach(caption => {
-        const titleElement = caption.querySelector('.card__title');
-        if (titleElement) {
-            const title = titleElement.textContent;
-            const whatsappBtn = createWhatsAppButton(title);
-            caption.appendChild(whatsappBtn);
-        }
-    });
-});
 </script>
 
-<!-- JS -->
-<script src="js/vendors/trianglify.min.js"></script>
-<script src="js/vendors/TweenMax.min.js"></script>
-<script src="js/vendors/ScrollToPlugin.min.js"></script>
-<script src="js/vendors/cash.min.js"></script>
-<script src="js/card-modern-blog.js"></script>
-<script src="js/modern-blog.js"></script>
+<style>
+
+:root{
+  --paper: #F6F5F1;
+  --panel: #ECEAE2;
+  --navy: #17335A;
+  --navy-dim: #0F2542;
+  --gold: #C99A34;
+  --red: #A93226;
+  --ink: #1B1B18;
+  --ink-soft: #514F49;
+  --line: #D8D5C9;
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+
+body{
+  margin:0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Work Sans', -apple-system, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,h2,h3{
+  font-family: 'Barlow Condensed', 'Work Sans', sans-serif;
+  font-weight: 600;
+  text-transform: none;
+  margin: 0;
+  color: var(--navy);
+  letter-spacing: 0.005em;
+}
+
+a{ color: inherit; }
+img{ max-width:100%; display:block; }
+
+.wrap{ max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+
+/* ---------------- header ---------------- */
+
+.site-header{
+  position: sticky; top:0; z-index: 40;
+  background: var(--paper);
+  border-bottom: 2px solid var(--navy);
+}
+
+.site-header .wrap{
+  height: 82px;
+  display:flex; align-items:center; justify-content: space-between;
+}
+
+.brand{ display:flex; align-items:center; gap:10px; text-decoration:none; }
+.brand img{ height: 32px; }
+.brand span{ font-family:'Barlow Condensed',sans-serif; font-size:1.5rem; font-weight:700; color:var(--navy); }
+
+.main-nav{ display:flex; align-items:center; gap:30px; }
+.main-nav a{
+  text-decoration:none; font-size:0.94rem; color:var(--ink-soft);
+  border-bottom:1px solid transparent; padding-bottom:2px;
+  transition: color .2s ease, border-color .2s ease;
+}
+.main-nav a:hover{ color:var(--navy); border-color:var(--gold); }
+
+.btn{
+  display:inline-flex; align-items:center; gap:8px;
+  background: var(--red); color:#F7F3E8; text-decoration:none;
+  padding:11px 22px; font-size:0.92rem; border:1px solid var(--red);
+  font-weight:500;
+  transition: background .2s ease, border-color .2s ease;
+}
+.btn:hover{ background:#8a291f; border-color:#8a291f; }
+
+.btn.navy{ background:var(--navy); border-color:var(--navy); }
+.btn.navy:hover{ background:var(--navy-dim); border-color:var(--navy-dim); }
+
+/* ---------------- hero ---------------- */
+
+.hero{ position:relative; padding: 80px 0 70px; overflow:hidden; background: var(--navy); color:#EDEAE0; }
+
+.hero .wrap{
+  display:grid; grid-template-columns: 1.05fr 0.9fr; gap:56px; align-items:center;
+}
+
+.tags{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom: 22px; }
+.tags span{
+  border:1px solid rgba(237,234,224,0.4); color:#D8D3C3;
+  font-size:0.8rem; padding:5px 12px;
+}
+
+.hero h1{
+  color:#FAF8F2; font-size: clamp(2.5rem,4.4vw,3.6rem); line-height:1.04; font-weight:700;
+}
+
+.hero h1 .accent{ color: var(--gold); }
+
+.hero p.lede{
+  margin: 22px 0 32px; max-width:48ch; color:#C7C3B4; font-size:1.08rem;
+}
+
+.hero .actions{ display:flex; gap:14px; flex-wrap:wrap; }
+
+.hero-visual{
+  position:relative;
+  border: 1px solid rgba(237,234,224,0.25);
+}
+.hero-visual img{ width:100%; height:100%; object-fit:cover; aspect-ratio: 4/3.2; }
+
+.ribbon{
+  position:absolute; top: -14px; right: 28px;
+  background: var(--gold); color: var(--navy-dim);
+  font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:1rem;
+  padding: 8px 18px 10px;
+  clip-path: polygon(0 0, 100% 0, 100% 78%, 50% 100%, 0 78%);
+}
+
+/* ---------------- section shell ---------------- */
+
+section{ padding: 84px 0; }
+
+.section-head{
+  display:flex; justify-content:space-between; align-items:flex-end; gap:24px;
+  margin-bottom: 44px; border-bottom: 1px solid var(--line); padding-bottom: 24px;
+}
+.section-head h2{ font-size: clamp(1.9rem,3vw,2.5rem); color:var(--navy); }
+.section-head p{ max-width:36ch; color:var(--ink-soft); font-size:0.98rem; margin:0; }
+
+/* ---------------- kit grid ---------------- */
+
+.kit{ background: var(--panel); }
+
+.kit-grid{
+  display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 2px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.kit-item{
+  background: var(--paper);
+  padding: 26px;
+  display:flex; flex-direction:column; gap:14px;
+}
+
+.kit-num{
+  font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:0.95rem;
+  color: var(--gold);
+}
+
+.kit-thumb{ width:100%; aspect-ratio: 4/3; overflow:hidden; border:1px solid var(--line); background:var(--panel); }
+.kit-thumb img{ width:100%; height:100%; object-fit:cover; }
+
+.kit-item h3{ font-size:1.5rem; color:var(--navy); font-weight:600; }
+.kit-item p{ margin:0; color:var(--ink-soft); font-size:0.94rem; flex-grow:1; }
+
+.kit-item .quote{
+  align-self:flex-start; text-decoration:none; font-size:0.88rem;
+  color:var(--navy); border-bottom:1px solid var(--navy); padding-bottom:2px;
+  transition: color .2s ease, border-color .2s ease;
+}
+.kit-item .quote:hover{ color:var(--red); border-color:var(--red); }
+
+/* ---------------- coverage ---------------- */
+
+.coverage .wrap{ display:grid; grid-template-columns: 0.9fr 1.1fr; gap:56px; align-items:start; }
+
+.coverage h2{ font-size: clamp(1.9rem,3vw,2.5rem); margin-bottom:18px; }
+.coverage p{ color:var(--ink-soft); max-width:42ch; }
+
+.coverage-list{ list-style:none; margin:26px 0 0; padding:0; display:grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; }
+.coverage-list li{
+  border-top:1px solid var(--line); padding: 10px 0; font-size:0.96rem; color:var(--ink-soft);
+}
+
+.faq{ display:flex; flex-direction:column; gap:0; }
+.faq-item{ border-top:1px solid var(--line); padding: 20px 0; }
+.faq-item:last-child{ border-bottom:1px solid var(--line); }
+.faq-item h3{ font-size:1.15rem; color:var(--navy); margin-bottom:8px; font-weight:600; }
+.faq-item p{ margin:0; color:var(--ink-soft); font-size:0.95rem; }
+
+/* ---------------- secondary catalog ---------------- */
+
+.secondary{ background: var(--panel); }
+
+.secondary .section-head{ border-color: var(--line); }
+
+.secondary-row{
+  display:flex; flex-wrap:wrap; gap: 18px;
+}
+.secondary-row .mini{
+  width: 128px; text-align:center; opacity:0.82; transition: opacity .2s ease;
+}
+.secondary-row .mini:hover{ opacity:1; }
+.secondary-row .mini img{
+  width:100%; height:86px; object-fit:cover; border:1px solid var(--line);
+}
+.secondary-row .mini span{ display:block; margin-top:6px; font-size:0.78rem; color:var(--ink-soft); }
+
+.secondary-cta{ margin-top: 26px; font-size:0.92rem; color:var(--ink-soft); }
+.secondary-cta a{ color:var(--navy); text-decoration:none; border-bottom:1px solid var(--navy); }
+
+/* ---------------- seo article ---------------- */
+
+.article .wrap{ max-width: 900px; }
+.article .intro{
+  font-family:'Barlow Condensed',sans-serif; font-size:1.7rem; font-weight:600; color:var(--navy);
+  max-width: 32ch; margin-bottom: 36px; line-height:1.25;
+}
+.article-columns{ column-count:2; column-gap:48px; color:var(--ink-soft); }
+.article-columns h2{ font-size:1.2rem; color:var(--navy); margin:24px 0 10px; break-after:avoid; font-weight:600; }
+.article-columns p{ margin:0 0 16px; font-size:0.98rem; }
+.article-columns strong{ color:var(--ink); font-weight:600; }
+
+/* ---------------- contact ---------------- */
+
+.contact{ background: var(--navy); color:#EDEAE0; }
+.contact .wrap{ display:grid; grid-template-columns:1.2fr 1fr; gap:48px; align-items:center; }
+.contact h2{ color:#FAF8F2; font-size:clamp(1.9rem,3vw,2.6rem); max-width:16ch; }
+.contact p{ color:#C7C3B4; max-width:42ch; margin:18px 0 30px; }
+
+.contact-details{ display:flex; flex-direction:column; gap:18px; }
+.contact-details a{
+  text-decoration:none; color:#FAF8F2; font-size:1.02rem;
+  border-bottom:1px solid rgba(250,248,242,0.2); padding-bottom:10px;
+  display:flex; justify-content:space-between;
+}
+.contact-details a span.label{ color:#9AA6B8; font-size:0.85rem; }
+
+/* ---------------- footer ---------------- */
+
+footer{ background: var(--navy-dim); color:#93907F; font-size:0.86rem; }
+footer .wrap{ padding:24px 32px; display:flex; justify-content:space-between; align-items:center; }
+footer a{ color:#C7C3B4; text-decoration:none; }
+footer a:hover{ color:#FAF8F2; }
+
+/* ---------------- responsive ---------------- */
+
+@media (max-width: 860px){
+  .hero .wrap{ grid-template-columns:1fr; }
+  .hero-visual{ order:-1; }
+  .main-nav{ display:none; }
+  .coverage .wrap{ grid-template-columns:1fr; }
+  .coverage-list{ grid-template-columns:1fr; }
+  .article-columns{ column-count:1; }
+  .contact .wrap{ grid-template-columns:1fr; }
+  section{ padding:60px 0; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <img src="https://jnconviteria.com.br/img/logo.png" alt="Kit Campanha Política">
+      <span>Kit Campanha Política</span>
+    </a>
+    <nav class="main-nav">
+      <a href="#kit">Kit eleitoral</a>
+      <a href="#cobertura">Área de atendimento</a>
+      <a href="#tambem-fazemos">Também fazemos</a>
+      <a href="#contato">Contato</a>
+      <a class="btn" href="https://wa.me/5575992428000?text=Olá,%20vim%20pelo%20site%20da%20Gráfica%20JN" style="color:#fff; padding:10px 10px 10px 10px;">Pedir orçamento</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="tags">
+          <span>Feira de Santana</span>
+          <span>Salvador</span>
+          <span>Região</span>
+        </div>
+        <h1>Sua campanha nas ruas, <span class="accent">do primeiro ao último dia</span>.</h1>
+        <p class="lede">Kit completo de material eleitoral — pirulito, adesivo de carro, praguinha e placão, mochila pirulito e perfurado — produzido e entregue em Feira de Santana, Salvador e região.</p>
+        <div class="actions">
+          <a class="btn" href="https://wa.me/5575992428000?text=Olá,%20vim%20pelo%20site%20do%20Kit%20Campanha%20Política" target="_blank">Montar meu kit pelo WhatsApp</a>
+          <a class="btn navy" href="#kit">Ver itens do kit</a>
+        </div>
+      </div>
+      <figure class="hero-visual">
+        <span class="ribbon">Kit eleitoral</span>
+        <img src="https://alpha-cms-content-prod.s3.us-east-1.amazonaws.com/blog/740x650px_Post_Blog_fe4e565d05.png" alt="Praguinha e placão de campanha política 30x30">
+      </figure>
+    </div>
+  </section>
+
+  <section class="kit" id="kit">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Monte seu kit eleitoral</h2>
+        <p>Cinco itens que cobrem rua, veículo e ponto fixo — peça avulso ou o kit completo.</p>
+      </div>
+
+      <div class="kit-grid">
+
+        <div class="kit-item">
+          <span class="kit-num">01</span>
+          <div class="kit-thumb"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4i0IaZJByuzfdZ4iyaYzk_aYFuphWFJFDoT5PNMAP0lCmdHoYx61CWVBC&s=10" alt="Pirulito de campanha política"></div>
+          <h3>Pirulito</h3>
+          <p>Placa em haste para divulgação de candidatos em ruas, esquinas e eventos de campanha.</p>
+          <a class="quote" href="https://wa.me/5575992428000?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20orçamento%20para%20%22Pirulito%22" target="_blank">Solicitar orçamento</a>
+        </div>
+
+        <div class="kit-item">
+          <span class="kit-num">02</span>
+          <div class="kit-thumb"><img src="https://www.nicometal.com.br/assets/images/blog/adesivo-perfurado-eleicoes-1.webp" alt="Adesivo de carro eleitoral"></div>
+          <h3>Adesivo de Carro</h3>
+          <p>Adesivo eleitoral para vidros e lataria de veículos, mantendo o candidato visível nas ruas todos os dias.</p>
+          <a class="quote" href="https://wa.me/5575992428000?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20orçamento%20para%20%22Adesivo%20de%20Carro%22" target="_blank">Solicitar orçamento</a>
+        </div>
+
+        <div class="kit-item">
+          <span class="kit-num">03</span>
+          <div class="kit-thumb"><img src="https://alpha-cms-content-prod.s3.us-east-1.amazonaws.com/blog/740x650px_Post_Blog_fe4e565d05.png" alt="Praguinha e placão de campanha 30x30"></div>
+          <h3>Praguinha e Placão 30x30</h3>
+          <p>Placas no formato 30x30 para fixação em portões, muros e postes ao longo do trajeto de campanha.</p>
+          <a class="quote" href="https://wa.me/5575992428000?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20orçamento%20para%20%22Praguinha%20e%20Placão%2030x30%22" target="_blank">Solicitar orçamento</a>
+        </div>
+
+        <div class="kit-item">
+          <span class="kit-num">04</span>
+          <div class="kit-thumb"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5x2_HHr3JjTA8xGpZREthgR_a13JjpViM0cOuBchF82dkRoq16Z9s2vtS&s=10" alt="Mochila pirulito de campanha"></div>
+          <h3>Mochila Pirulito</h3>
+          <p>Mochila com suporte para pirulito, usada por cabos eleitorais para divulgação móvel em ruas e eventos.</p>
+          <a class="quote" href="https://wa.me/5575992428000?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20orçamento%20para%20%22Mochila%20Pirulito%22" target="_blank">Solicitar orçamento</a>
+        </div>
+
+        <div class="kit-item">
+          <span class="kit-num">05</span>
+          <div class="kit-thumb"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL8SpdTp8aUnhvRe0JUiuW8DcRtXqO8cqBp6RgeZp_Zw&s=10" alt="Adesivo perfurado eleitoral"></div>
+          <h3>Perfurado</h3>
+          <p>Adesivo perfurado (visão só de dentro para fora) para vidros de carros e vitrines de comitê.</p>
+          <a class="quote" href="https://wa.me/5575992428000?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20orçamento%20para%20%22Perfurado%22" target="_blank">Solicitar orçamento</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="coverage" id="cobertura">
+    <div class="wrap">
+      <div>
+        <h2>Onde atendemos</h2>
+        <p>Produção própria com entrega para campanhas em Feira de Santana, Salvador e municípios da região, do início da pré-campanha até a reta final.</p>
+        <ul class="coverage-list">
+          <li>Feira de Santana</li>
+          <li>Salvador</li>
+          <li>Região Metropolitana</li>
+          <li>Interior da Bahia</li>
+        </ul>
+      </div>
+
+      <div class="faq">
+        <div class="faq-item">
+          <h3>Como funciona o pedido do kit?</h3>
+          <p>Você escolhe os itens pelo WhatsApp, define quantidades e a gente retorna com o orçamento e o prazo de produção antes de fechar.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Dá para comprar só um item, sem ser o kit completo?</h3>
+          <p>Sim. Pirulito, adesivo de carro, praguinha e placão, mochila pirulito e perfurado podem ser pedidos separadamente, conforme a necessidade da campanha.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Vocês entregam fora de Feira de Santana?</h3>
+          <p>Atendemos Salvador e outros municípios da região — envie sua cidade pelo WhatsApp para confirmarmos prazo e forma de entrega.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Quanto tempo antes da campanha devo fazer o pedido?</h3>
+          <p>Quanto antes melhor, especialmente perto do início oficial da propaganda eleitoral, quando a demanda por material de campanha é maior.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="secondary" id="tambem-fazemos">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Também fazemos</h2>
+        <p>Somos gráfica completa — além do kit eleitoral, produzimos itens para eventos e empresas.</p>
+      </div>
+      <div class="secondary-row">
+        <div class="mini"><img src="https://jnconviteria.com.br/img/convites.jpg" alt="Convites"><span>Convites</span></div>
+        <div class="mini"><img src="https://jnconviteria.com.br/img/caixascartonadas.jpg" alt="Caixas Cartonadas"><span>Caixas Cartonadas</span></div>
+        <div class="mini"><img src="https://jnconviteria.com.br/img/portacertificado.jpg" alt="Porta Certificado"><span>Porta Certificado</span></div>
+        <div class="mini"><img src="https://jnconviteria.com.br/img/ingressos.jpg" alt="Ingressos"><span>Ingressos</span></div>
+        <div class="mini"><img src="https://jnconviteria.com.br/img/placahomenagem.jpg" alt="Placa de Homenagem"><span>Placa de Homenagem</span></div>
+        <div class="mini"><img src="https://jnconviteria.com.br/img/Crachá.jpg" alt="Crachá"><span>Crachá</span></div>
+        <div class="mini"><img src="https://jnconviteria.com.br/img/Cordao.jpg" alt="Cordão"><span>Cordão</span></div>
+        <div class="mini"><img src="https://jnconviteria.com.br/img/Pulseiras-Atendimento.jpg" alt="Pulseiras de Atendimento"><span>Pulseiras</span></div>
+        <div class="mini"><img src="https://jnconviteria.com.br/img/Livros.jpg" alt="Livros"><span>Livros</span></div>
+        <div class="mini"><img src="https://jnconviteria.com.br/img/Broches.jpg" alt="Broches"><span>Broches</span></div>
+        <div class="mini"><img src="https://jnconviteria.com.br/img/Monografia.jpg" alt="Tese, Dissertação e Monografia"><span>Monografias</span></div>
+      </div>
+      <p class="secondary-cta">Confira o catálogo completo de gráfica em <a href="https://graficajn.com.br" target="_blank">graficajn.com.br</a></p>
+    </div>
+  </section>
+
+  <section class="article">
+    <div class="wrap">
+      <p class="intro">Material eleitoral em Feira de Santana, Salvador e região — kit completo de campanha política.</p>
+
+      <div class="article-columns">
+        <h2>Kit eleitoral completo para sua campanha</h2>
+        <p>O <strong>Kit Campanha Política</strong> é referência em Feira de Santana, Salvador e região para produção de <strong>material de campanha eleitoral</strong> completo. Fornecemos <strong>Pirulito, Adesivo de Carro, Praguinha e Placão 30x30, Mochila Pirulito e Perfurado</strong>, com produção rápida e qualidade gráfica para fortalecer a presença do candidato nas ruas.</p>
+        <p>Trabalhamos com candidatos, coordenadores de campanha e cabos eleitorais para entregar o <strong>kit eleitoral</strong> ideal: <strong>pirulitos</strong> e <strong>mochilas pirulito</strong> para divulgação em pontos de grande movimento, <strong>adesivos de carro</strong> e <strong>adesivos perfurados</strong> para veículos e vitrines, além de <strong>praguinhas e placões 30x30</strong> para fixação em portões, muros e postes.</p>
+
+        <h2>Cobertura em Feira de Santana, Salvador e região</h2>
+        <p>Atendemos campanhas em <strong>Feira de Santana</strong>, <strong>Salvador</strong> e municípios da região, com entrega ágil para acompanhar o calendário eleitoral e as demandas de cada etapa da campanha — da pré-campanha à reta final.</p>
+
+        <h2>Também somos gráfica completa</h2>
+        <p>Além do material eleitoral, também produzimos convites, crachás, cordões, placas de homenagem e outros itens gráficos através da nossa gráfica parceira, a <strong>Gráfica JN</strong>. Fale com a gente e monte o kit ideal para a sua campanha.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contato">
+    <div class="wrap">
+      <div>
+        <h2>Monte o kit da sua campanha.</h2>
+        <p>Envie os itens que precisa e as quantidades — respondemos com orçamento e prazo de produção antes de fechar o pedido.</p>
+        <a class="btn" href="https://wa.me/5575992428000?text=Olá,%20vim%20pelo%20site%20do%20Kit%20Campanha%20Política" target="_blank">Falar no WhatsApp</a>
+      </div>
+      <div class="contact-details">
+        <a href="https://wa.me/5575992428000" target="_blank"><span class="label">WhatsApp</span> (75) 99242-8000</a>
+        <a href="https://www.google.com/maps?sca_esv=adde10145c0e0ebd&hl=pt-PT&iflsig=AOw8s4IAAAAAaJTT5XRiqeoZZWkvYx9BgHsZgdBvwcEU&uact=5&gs_lp=Egdnd3Mtd2l6Ig1qbiBjb252aXRlcmlhMgUQABiABDIFEAAYgAQyBhAAGBYYHjICECYyBRAAGO8FMgUQABjvBTIFEAAY7wUyBRAAGO8FSLUMULYEWPQLcAB4AJABAJgBmgKgAe8HqgEDMi00uAEDyAEA-AEBmAIEoAKjCKgCCsICEBAAGIAEGEMYtAIYigUY6gLCAhIQABiABBhDGLQCGIoFGOoCGArCAhoQABiABBi0AhjUAxjlAhi3AxiKBRjqAhiKA8ICEBAuGIAEGNEDGEMYxwEYigXCAgsQLhiABBjRAxjHAZgD4AHxBalyTAmM-j4GkgcDMi00oAfsFrIHAzItNLgHowjCBwUyLTEuM8gHKw&um=1&ie=UTF-8&fb=1&gl=br&sa=X&geocode=KaXao912NxQHMa468ueXAMiS&daddr=R.+Rio+Amazonas,+260+-+Capuchinhos,+Feira+de+Santana+-+BA,+44076-300" target="_blank"><span class="label">Endereço</span> R. Rio Amazonas, 260 — Capuchinhos, Feira de Santana</a>
+        <a href="https://www.instagram.com/jnconviteria/" target="_blank"><span class="label">Instagram</span> @jnconviteria</a>
+        <a href="https://www.facebook.com/jnconviteria/?locale=pt_BR" target="_blank"><span class="label">Facebook</span> /jnconviteria</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Kit Campanha Política — Feira de Santana, BA</span>
+    <a href="#top">Voltar ao topo</a>
+  </div>
+</footer>
+
 </body>
 </html>
