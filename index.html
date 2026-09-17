@@ -112,7 +112,19 @@ img{ max-width:100%; display:block; }
 
 /* ---------------- hero ---------------- */
 
-.hero{ position:relative; padding: 80px 0 70px; overflow:hidden; background: var(--navy); color:#EDEAE0; }
+.hero{
+  position:relative;
+  padding: 80px 0 70px;
+  overflow:hidden;
+  color:#EDEAE0;
+
+  /* NOVO: imagem de fundo + overlay navy para legibilidade */
+  background:
+    linear-gradient(180deg, rgba(23,51,90,0.88) 0%, rgba(15,37,66,0.92) 100%),
+    url('https://www.nicometal.com.br/assets/images/blog/adesivo-perfurado-eleicoes-1.webp') center/cover no-repeat;
+  background-color: var(--navy); /* fallback enquanto a imagem carrega */
+}
+  
 
 .hero .wrap{
   display:grid; grid-template-columns: 1.05fr 0.9fr; gap:56px; align-items:center;
