@@ -173,10 +173,24 @@ section{ padding: 84px 0; }
 
 .kit-item{
   background: var(--paper);
+  cursor: pointer; 
   padding: 26px;
   display:flex; flex-direction:column; gap:14px;
+  position: relative;              /* <-- novo: cria contexto p/ o stretched link */
+  transition: transform .2s ease, box-shadow .2s ease;
 }
 
+/* o card inteiro fica clicável via pseudo-elemento do link */
+.kit-item .quote::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+}
+
+/* feedback visual ao passar o mouse em qualquer ponto do card */
+.kit-item:hover{ box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+.kit-item:hover .quote{ color: var(--red); border-color: var(--red); }
 .kit-num{
   font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:0.95rem;
   color: var(--gold);
@@ -193,8 +207,15 @@ section{ padding: 84px 0; }
   color:var(--navy); border-bottom:1px solid var(--navy); padding-bottom:2px;
   transition: color .2s ease, border-color .2s ease;
 }
+.kit-item .quote{
+  align-self:flex-start; text-decoration:none; font-size:0.88rem;
+  color:var(--navy); border-bottom:1px solid var(--navy); padding-bottom:2px;
+  transition: color .2s ease, border-color .2s ease;
+  position: relative;
+  z-index: 2;                      /* <-- fica clicável por cima do overlay */
+}
 .kit-item .quote:hover{ color:var(--red); border-color:var(--red); }
-
+  
 /* ---------------- coverage ---------------- */
 
 .coverage .wrap{ display:grid; grid-template-columns: 0.9fr 1.1fr; gap:56px; align-items:start; }
